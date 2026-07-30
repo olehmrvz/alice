@@ -71,7 +71,7 @@ function SiteFooter() {
     <div className="container home-footer-grid">
       <div className="footer-brand">
         <Link className="logo" to="/"><strong>ALICE</strong><small>in Beautyland</small></Link>
-        <p>Природність — наш принцип.<br /><em>Не короткочасний тренд.</em></p>
+        <p>Щоб у дзеркалі ви<br /><em>бачили себе. Просто свіжішою.</em></p>
         <a className="footer-instagram" href={instagramUrl}><InstagramLogo aria-hidden="true" /> @alice__in__beautyland <Arrow /></a>
       </div>
       <nav className="footer-column" aria-label="Навігація в підвалі">

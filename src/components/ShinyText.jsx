@@ -8,7 +8,7 @@ export default function ShinyText({
   speed = 2,
   className = "",
   color = "#17211a",
-  shineColor = "#91a08a",
+  shineColor = "#33453a",
   spread = 120,
   yoyo = false,
   pauseOnHover = false,
@@ -62,7 +62,7 @@ export default function ShinyText({
     <motion.span
       className={`shiny-text ${className}`.trim()}
       style={{
-        backgroundImage: `linear-gradient(${spread}deg, ${color} 0%, ${color} 42%, ${shineColor} 50%, ${color} 58%, ${color} 100%)`,
+        backgroundImage: `linear-gradient(${spread}deg, ${color} 0%, ${color} 47%, ${shineColor} 50%, ${color} 53%, ${color} 100%)`,
         backgroundPosition,
       }}
       onMouseEnter={handleMouseEnter}

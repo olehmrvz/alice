@@ -513,11 +513,11 @@ export function App() {
           <div className="hero-stage container">
             <div className="hero-copy">
               <h1 id="hero-title">
-                <span><ShinyText text="Природний" speed={7} delay={9} /></span>
-                <span><ShinyText text="результат" speed={7} delay={9} /></span>
-                <span><ShinyText text="без зайвих" speed={7} delay={9} /></span>
+                <span><ShinyText text="Природний" speed={9} delay={15} /></span>
+                <span><ShinyText text="результат" speed={9} delay={15} /></span>
+                <span><ShinyText text="без зайвих" speed={9} delay={15} /></span>
                 <span>
-                  <ShinyText text="втручань" speed={7} delay={9} /><i>.</i>
+                  <ShinyText text="втручань" speed={9} delay={15} /><i>.</i>
                 </span>
               </h1>
               <p>
@@ -884,9 +884,9 @@ export function App() {
               <div>
                 <span className="eyebrow">ДІАГНОСТИЧНИЙ ПОГЛЯД</span>
                 <h2 id="results-title">
-                  Результат — не один кадр.
+                  Зміни, після яких ви
                   <br />
-                  <em>Важливий контекст.</em>
+                  <em>лишаєтесь собою.</em>
                 </h2>
               </div>
               <p>
@@ -1245,9 +1245,9 @@ export function App() {
               <small>in Beautyland</small>
             </a>
             <p>
-              Природність — наш принцип.
+              Щоб у дзеркалі ви
               <br />
-              <em>Не короткочасний тренд.</em>
+              <em>бачили себе. Просто свіжішою.</em>
             </p>
             <a
               className="footer-instagram"
