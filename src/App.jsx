@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import ShinyText from "./components/ShinyText";
 import {
   ArrowDown,
   ArrowRight,
@@ -504,11 +505,11 @@ export function App() {
           <div className="hero-stage container">
             <div className="hero-copy">
               <h1 id="hero-title">
-                <span>Природний</span>
-                <span>результат</span>
-                <span>без зайвих</span>
+                <span><ShinyText text="Природний" speed={7} delay={9} /></span>
+                <span><ShinyText text="результат" speed={7} delay={9} /></span>
+                <span><ShinyText text="без зайвих" speed={7} delay={9} /></span>
                 <span>
-                  втручань<i>.</i>
+                  <ShinyText text="втручань" speed={7} delay={9} /><i>.</i>
                 </span>
               </h1>
               <p>
