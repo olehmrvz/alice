@@ -1,8 +1,11 @@
 node_modules/
 dist/
+.npm-cache/
+.npmrc
 .DS_Store
 
 # Local delivery archives and visual QA artefacts
 Alice-In-Beautyland-build.zip
 Alice-In-Beautyland-build.bin
 audit/
+design-qa.md
