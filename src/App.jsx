@@ -339,6 +339,14 @@ export function App() {
   const [interest, setInterest] = useState(
     () => new URLSearchParams(window.location.search).get("interest") || "",
   );
+
+  const handleServiceRailWheel = (event) => {
+    if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    const rail = event.currentTarget;
+    if (rail.scrollWidth <= rail.clientWidth) return;
+    event.preventDefault();
+    rail.scrollLeft += event.deltaY;
+  };
   const [interestError, setInterestError] = useState(false);
   const [bookingVisible, setBookingVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -661,7 +669,12 @@ export function App() {
               Гортайте <ArrowRight aria-hidden="true" />
             </span>
           </div>
-          <div className="service-rail">
+          <div
+            className="service-rail"
+            aria-label="Напрями послуг. Прокручуйте колесом миші або горизонтальним жестом"
+            onWheel={handleServiceRailWheel}
+            tabIndex="0"
+          >
             {directions.map(([number, title, description, image, slug]) => (
               <a
                 className="service-card"
