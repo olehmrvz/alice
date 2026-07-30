@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local delivery archives and visual QA artefacts
+Alice-In-Beautyland-build.zip
+Alice-In-Beautyland-build.bin
+audit/
