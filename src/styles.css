@@ -274,7 +274,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .review-story svg { width: 17px; }
 .review-story:hover { color: var(--snow); background: var(--gradient-forest); }
 .review-story:hover p, .review-story:hover>span, .review-story:hover>small { color: var(--mist); }
-.instagram-follow { padding: 0 0 8px; background: var(--paper); }
+.instagram-follow { padding: 72px 0 64px; background: var(--paper); }
 .instagram-panel { display: grid; grid-template-columns: .84fr 1.16fr; gap: 1px; padding: 1px; overflow: hidden; border: 1px solid rgba(255,254,249,.14); border-radius: 42px; color: var(--snow); background: rgba(255,254,249,.16); box-shadow: 0 24px 70px rgba(23,33,26,.14); }
 .instagram-profile, .instagram-invite { min-height: 224px; padding: 38px 40px; }
 .instagram-profile { background: linear-gradient(145deg, #293b30 0%, #1e2d24 100%); }
@@ -287,7 +287,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .instagram-panel h3 { max-width: 540px; margin: 18px 0 26px; font: 600 clamp(27px,2.7vw,38px)/1.02 var(--font); letter-spacing: -.055em; }
 .instagram-panel a { text-decoration: none; }
 
-.faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-top: 56px; padding-bottom: 96px; }
+.faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-top: 72px; padding-bottom: 104px; }
 .faq h2 { font-size: clamp(42px, 4.8vw, 58px); }
 .faq>div>p { color: var(--steel); }
 .faq-list { border-top: 1px solid var(--mist); }
@@ -553,7 +553,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .review-stories { border-radius: 30px; }
   .review-story { min-height: 230px; padding: 22px; }
   .review-story h3 { margin-top: 34px; }
-  .instagram-follow { padding-bottom: 12px; }
+  .instagram-follow { padding: 44px 0 32px; }
   .instagram-panel { padding: 1px; border-radius: 30px; }
   .instagram-profile, .instagram-invite { min-height: auto; padding: 28px 22px; }
   .instagram-invite .button { width: 100%; }
