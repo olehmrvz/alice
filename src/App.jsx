@@ -299,17 +299,20 @@ function InstagramPanel() {
           <div className="instagram-profile">
             <span>
               <InstagramLogo aria-hidden="true" />
-              <small>INSTAGRAM</small>
+              <small>ПЕРЕВІРЕНИЙ ПРОФІЛЬ</small>
             </span>
             <strong>@alice__in__beautyland</strong>
-            <p>
-              Погоджені відгуки, пояснення лікарів і атмосфера клініки — без
-              вигаданих цитат.
-            </p>
+            <p>Тут залишається те, що можна побачити у первинному контексті.</p>
+            <ul className="instagram-topics" aria-label="Що є у профілі">
+              <li>Відгуки</li>
+              <li>Пояснення лікарів</li>
+              <li>Атмосфера клініки</li>
+            </ul>
           </div>
           <div className="instagram-invite">
-            <span>ЖИВИЙ ПРОФІЛЬ КЛІНІКИ</span>
-            <h3>Більше контексту перед першим візитом.</h3>
+            <span>ПЕРЕД ПЕРШИМ ВІЗИТОМ</span>
+            <h3>Подивіться, як усе відбувається насправді.</h3>
+            <p>Без вигаданих цитат і вирваних з контексту результатів.</p>
             <a
               className="button button-light"
               href="https://www.instagram.com/alice__in__beautyland/"

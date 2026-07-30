@@ -276,15 +276,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .review-story:hover p, .review-story:hover>span, .review-story:hover>small { color: var(--mist); }
 .instagram-follow { padding: 72px 0 64px; background: var(--paper); }
 .instagram-panel { display: grid; grid-template-columns: .84fr 1.16fr; gap: 1px; padding: 1px; overflow: hidden; border: 1px solid rgba(255,254,249,.14); border-radius: 42px; color: var(--snow); background: rgba(255,254,249,.16); box-shadow: 0 24px 70px rgba(23,33,26,.14); }
-.instagram-profile, .instagram-invite { min-height: 224px; padding: 38px 40px; }
-.instagram-profile { background: linear-gradient(145deg, #293b30 0%, #1e2d24 100%); }
-.instagram-invite { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; background: radial-gradient(circle at 94% 8%, rgba(124,140,114,.28), transparent 36%), #17241c; }
+.instagram-profile, .instagram-invite { min-height: 272px; padding: 38px 40px; }
+.instagram-profile { display: flex; flex-direction: column; background: radial-gradient(circle at 4% 95%, rgba(124,140,114,.2), transparent 44%), linear-gradient(145deg, #293b30 0%, #1e2d24 100%); }
+.instagram-invite { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; background: radial-gradient(circle at 94% 8%, rgba(124,140,114,.3), transparent 36%), #17241c; }
 .instagram-profile>span { display: flex; align-items: center; gap: 10px; color: var(--mist); }
 .instagram-profile>span svg { width: 24px; height: 24px; }
 .instagram-profile small, .instagram-invite>span { color: var(--steel); font-size: 11px; font-weight: 500; letter-spacing: .06em; }
-.instagram-profile strong { display: block; margin: 34px 0 10px; font-size: 19px; font-weight: 600; letter-spacing: -.035em; }
-.instagram-profile p { max-width: 350px; margin: 0; color: var(--mist); font-size: 13px; line-height: 1.55; }
-.instagram-panel h3 { max-width: 540px; margin: 18px 0 26px; font: 600 clamp(27px,2.7vw,38px)/1.02 var(--font); letter-spacing: -.055em; }
+.instagram-profile strong { display: block; margin: 32px 0 9px; font-size: 20px; font-weight: 600; letter-spacing: -.04em; }
+.instagram-profile p { max-width: 350px; margin: 0; color: var(--mist); font-size: 13px; line-height: 1.5; }
+.instagram-topics { display: flex; flex-wrap: wrap; gap: 7px; margin: auto 0 0; padding: 0; list-style: none; }
+.instagram-topics li { padding: 7px 9px; border: 1px solid rgba(255,254,249,.2); border-radius: 999px; color: var(--snow); background: rgba(255,254,249,.07); font-size: 11px; line-height: 1; }
+.instagram-panel h3 { max-width: 580px; margin: 16px 0 10px; font: 600 clamp(29px,2.9vw,42px)/1.02 var(--font); letter-spacing: -.06em; }
+.instagram-invite p { max-width: 430px; margin: 0 0 25px; color: var(--mist); font-size: 14px; line-height: 1.5; }
 .instagram-panel a { text-decoration: none; }
 
 .faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding-top: 72px; padding-bottom: 104px; }
