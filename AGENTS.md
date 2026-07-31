@@ -14,5 +14,6 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 - Horizontal service rails use direct drag interaction for mouse users; the vertical mouse wheel must remain reserved for page scrolling.
 - On tablet and mobile, section containers must retain the same side rhythm; avoid full-bleed panels unless intentionally used for an image. Reduce fixed content heights so an action never leaves a large dead gap before the next visual.
 - Mobile footer should present brand, navigation, visit details and legal/booking content as legible stacked groups, with at least 14px body links and an easy-to-hit booking CTA.
+- In two-column tablet footers, legal links and the booking CTA must span the full row below navigation and visit details; do not leave a deliberate empty column.
 
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.

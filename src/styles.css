@@ -436,6 +436,8 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .hero-scroll { display: none; }
   .section { padding-top: 82px; padding-bottom: 82px; }
   .manifesto { grid-template-columns: 1fr; gap: 0; }
+  .manifesto .section-intro { margin: 16px 0 0; }
+  .manifesto .principles { margin-top: 32px; }
   .principles { grid-template-columns: 1fr 1fr; }
   .principles article { min-height: 180px; }
   .principles article:nth-child(4) { border-left: 1px solid var(--cloud); }
@@ -484,7 +486,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .footer-column { gap: 16px; }
   .footer-column>span { margin-bottom: 12px; font-size: 11px; }
   .footer-column a, .footer-column p { font-size: 14px; }
-  .footer-documents { grid-column: 2; }
+  .footer-documents { grid-column: 1/-1; }
   .footer-booking-cta { width: 100%; margin-top: 12px!important; }
   .mobile-booking { position: fixed; z-index: 60; right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); left: 12px; min-height: 54px; display: flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--obsidian); border-radius: 999px; color: var(--snow); background: var(--gradient-button); box-shadow: 0 10px 30px rgba(23,33,26,.18); font-size: 14px; font-weight: 500; letter-spacing: -.015em; text-decoration: none; transition: transform .22s ease, background .22s ease; }
   .mobile-booking:active { transform: scale(.985); }

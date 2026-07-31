@@ -1256,9 +1256,9 @@ export function App() {
               <small>in Beautyland</small>
             </a>
             <p>
-              Дивитесь у дзеркало —
+              Виглядати свіжо.
               <br />
-              <em>і подобаєтесь собі.</em>
+              <em>Залишатися собою.</em>
             </p>
             <a
               className="footer-instagram"
