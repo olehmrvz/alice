@@ -530,10 +530,10 @@ export function App() {
               <h1 id="hero-title">
                 <span><ShinyText text="Природний" speed={9} delay={15} /></span>
                 <span><ShinyText text="результат" speed={9} delay={15} /></span>
-                <span><ShinyText text="без зайвих" speed={9} delay={15} /></span>
-                <span>
-                  <ShinyText text="втручань" speed={9} delay={15} /><i>.</i>
-                </span>
+  <span><ShinyText text="без зайвих" speed={9} delay={15} /></span>
+  <span>
+    <ShinyText text="втручань." speed={9} delay={15} />
+  </span>
               </h1>
               <p>
                 Починаємо з діагностики, щоб зберегти ваші риси й рекомендувати
