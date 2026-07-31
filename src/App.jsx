@@ -340,12 +340,27 @@ export function App() {
     () => new URLSearchParams(window.location.search).get("interest") || "",
   );
 
-  const handleServiceRailWheel = (event) => {
-    if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+  const serviceRailDrag = useRef(null);
+  const handleServiceRailPointerDown = (event) => {
+    if (event.button !== 0) return;
     const rail = event.currentTarget;
     if (rail.scrollWidth <= rail.clientWidth) return;
-    event.preventDefault();
-    rail.scrollLeft += event.deltaY;
+    serviceRailDrag.current = { startX: event.clientX, startScrollLeft: rail.scrollLeft };
+    rail.dataset.dragging = "true";
+    rail.setPointerCapture(event.pointerId);
+  };
+  const handleServiceRailPointerMove = (event) => {
+    const drag = serviceRailDrag.current;
+    if (!drag) return;
+    event.currentTarget.scrollLeft = drag.startScrollLeft - (event.clientX - drag.startX);
+  };
+  const handleServiceRailPointerEnd = (event) => {
+    if (!serviceRailDrag.current) return;
+    serviceRailDrag.current = null;
+    delete event.currentTarget.dataset.dragging;
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   };
   const [interestError, setInterestError] = useState(false);
   const [bookingVisible, setBookingVisible] = useState(false);
@@ -666,13 +681,16 @@ export function App() {
               </h2>
             </div>
             <span className="rail-hint">
-              Гортайте <ArrowRight aria-hidden="true" />
+              Перетягуйте <ArrowRight aria-hidden="true" />
             </span>
           </div>
           <div
             className="service-rail"
-            aria-label="Напрями послуг. Прокручуйте колесом миші або горизонтальним жестом"
-            onWheel={handleServiceRailWheel}
+            aria-label="Напрями послуг. Перетягуйте стрічку мишкою або горизонтальним жестом"
+            onPointerDown={handleServiceRailPointerDown}
+            onPointerMove={handleServiceRailPointerMove}
+            onPointerUp={handleServiceRailPointerEnd}
+            onPointerCancel={handleServiceRailPointerEnd}
             tabIndex="0"
           >
             {directions.map(([number, title, description, image, slug]) => (
@@ -973,13 +991,6 @@ export function App() {
                     </div>
                   ))}
                 </div>
-                <div className="evaluation-principle">
-                  <span>ДО</span>
-                  <strong>Початковий стан</strong>
-                  <i />
-                  <span>ПІСЛЯ</span>
-                  <strong>Контроль динаміки</strong>
-                </div>
                 <a className="button button-light" href="#booking">
                   Обговорити запит <Arrow />
                 </a>
@@ -1210,9 +1221,9 @@ export function App() {
           <div>
             <span className="eyebrow">FAQ</span>
             <h2 id="faq-title">
-              Відповіді перед
+              Знаєте, чого очікувати
               <br />
-              <em>першим візитом.</em>
+              <em>ще до візиту.</em>
             </h2>
             <p>Коротко пояснюємо, як підготуватися до консультації.</p>
           </div>
@@ -1245,9 +1256,9 @@ export function App() {
               <small>in Beautyland</small>
             </a>
             <p>
-              Щоб у дзеркалі ви
+              Дивитесь у дзеркало —
               <br />
-              <em>бачили себе. Просто свіжішою.</em>
+              <em>і подобаєтесь собі.</em>
             </p>
             <a
               className="footer-instagram"
