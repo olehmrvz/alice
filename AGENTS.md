@@ -10,5 +10,6 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 - Hero display typography may use a very infrequent, low-contrast sage sheen over graphite text; it must preserve readable dark text and respect reduced-motion preferences.
 - The header mark is a compact, unified wordmark: its divider and endorsement line should feel intentionally aligned, never squeezed or improvised.
 - Use softened eucalyptus tones for accents and forest surfaces. Do not use `#53644f` / `rgb(83,100,79)`, which reads muddy and inexpensive in this system.
+- Keep page-level light backgrounds to two intentional surfaces only: warm paper by default and a muted eucalyptus wash for diagnostic/evaluation moments. Cards may use a slightly lifted paper surface, but should not introduce additional section backgrounds.
 
 When implementing from a selected generated mock, treat that image as the source of truth for layout, component anatomy, density, spacing, color, typography, visible content, and hierarchy.

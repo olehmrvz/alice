@@ -13,9 +13,10 @@
   --paper: #f4f1ea;
   --snow: #fffef9;
   --ember: #71816d;
-  --gradient-paper: radial-gradient(circle at 12% 10%, rgba(217,223,210,.52), transparent 34%), linear-gradient(135deg, #fffef9 0%, #faf9f4 58%, #f4f1ea 100%);
-  --gradient-surface: linear-gradient(145deg, #fffef9 0%, #faf9f4 58%, #e8e4da 145%);
-  --gradient-sage: radial-gradient(circle at 82% 12%, rgba(255,254,249,.62), transparent 32%), linear-gradient(135deg, #e7ece4 0%, #dbe4d8 52%, #ece8df 100%);
+  /* Two light surfaces only: warm paper as the default, eucalyptus for diagnostic emphasis. */
+  --gradient-paper: linear-gradient(145deg, #f8f6f0 0%, #f4f1ea 100%);
+  --gradient-surface: linear-gradient(145deg, #fffef9 0%, #faf9f4 72%, #f4f1ea 100%);
+  --gradient-sage: linear-gradient(145deg, #eef2eb 0%, #e3eadf 100%);
   --gradient-forest: radial-gradient(circle at 78% 18%, rgba(154,168,152,.18), transparent 34%), linear-gradient(135deg, #24352b 0%, #30453a 54%, #1e2c24 100%);
   --gradient-button: linear-gradient(135deg, #24352b 0%, #31483b 58%, #667a65 135%);
   --max: 1200px;
@@ -212,7 +213,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .technology-flow small { color: var(--fog); font-size: 12px; }
 .technology-copy>.button { align-self: flex-start; }
 
-.results { background: radial-gradient(circle at 88% 8%, rgba(255,254,249,.82), transparent 29%), linear-gradient(145deg, #dfe5da 0%, #f4f1ea 58%, #e9e5da 100%); }
+.results { background: var(--gradient-sage); }
 .results-heading { display: grid; grid-template-columns: 1.28fr .72fr; gap: 72px; align-items: end; }
 .results-heading p { max-width: 440px; margin: 0 0 6px; color: var(--steel); font-size: 16px; line-height: 1.58; }
 .result-tabs { display: grid; grid-template-columns: repeat(4,1fr); margin: 48px 0 18px; overflow: hidden; border: 1px solid rgba(100,117,101,.18); border-radius: 22px; background: rgba(255,254,249,.38); }
