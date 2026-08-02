@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import ShinyText from "./components/ShinyText";
 import {
   ArrowDown,
   ArrowRight,
@@ -528,12 +527,10 @@ export function App() {
           <div className="hero-stage container">
             <div className="hero-copy">
               <h1 id="hero-title">
-                <span><ShinyText text="Природний" speed={9} delay={15} /></span>
-                <span><ShinyText text="результат" speed={9} delay={15} /></span>
-  <span><ShinyText text="без зайвих" speed={9} delay={15} /></span>
-  <span>
-    <ShinyText text="втручань." speed={9} delay={15} />
-  </span>
+                <span>Природний</span>
+                <span>результат</span>
+                <span>без зайвих</span>
+                <span>втручань.</span>
               </h1>
               <p>
                 Починаємо з діагностики, щоб зберегти ваші риси й рекомендувати
@@ -541,7 +538,7 @@ export function App() {
               </p>
               <div className="hero-actions">
                 <a className="button button-dark" href="#booking">
-                  Консультація від 1 000 грн
+                  Записатись на консультацію
                 </a>
                 <a
                   className="round-link"
@@ -735,9 +732,6 @@ export function App() {
                 вам.
               </p>
             </div>
-            <a className="button button-dark" href="#booking">
-              Консультація від 1 000 грн
-            </a>
           </div>
           <div className="concern-grid">
             {concerns.map(([title, text]) => (

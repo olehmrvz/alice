@@ -174,26 +174,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .journey>div p { max-width: 410px; color: var(--mist); font-size: 16px; }
 .journey .eyebrow { color: var(--mist); }
 .journey-counter { display: grid; grid-template-columns: auto minmax(90px, 190px) auto; align-items: center; gap: 14px; margin-top: 64px; color: var(--mist); font-size: 12px; }
-.journey-counter i { width: 100%; height: 2px; transform-origin: left; background: var(--ash); transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+.journey-counter i { width: 100%; height: 2px; transform-origin: left; background: var(--ash); transition: transform .8s cubic-bezier(.22,.75,.2,1); }
 .journey-counter small { color: var(--mist); font-size: 11px; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .journey-visual { position: relative; height: min(48svh, 450px); min-height: 330px; margin: 0; overflow: hidden; border-radius: 28px; background: #233329; }
 .journey-visual::after { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, transparent 52%, rgba(23,33,26,.66)); pointer-events: none; }
-.journey-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(.92); opacity: 0; transform: scale(1.09); transition: opacity .65s ease, transform 1.15s cubic-bezier(.2,.7,.2,1); }
+.journey-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) contrast(.92); opacity: 0; transform: scale(1.06); transition: opacity .9s cubic-bezier(.22,.75,.2,1), transform 1.35s cubic-bezier(.22,.75,.2,1); }
 .journey-visual img.active { opacity: .9; transform: scale(1.01); }
 .journey-visual figcaption { position: absolute; z-index: 2; right: 22px; bottom: 20px; left: 22px; display: flex; justify-content: space-between; gap: 14px; align-items: end; color: var(--snow); }
 .journey-visual figcaption span { font-size: 12px; }
 .journey-visual figcaption small { max-width: 150px; font-size: 12px; line-height: 1.35; text-align: right; }
 .journey-steps { border-top: 1px solid rgba(255,254,249,.18); }
-.journey-step { position: relative; width: 100%; display: grid; grid-template-columns: 45px 1fr 24px; gap: 10px; padding: 24px 0; border: 0; border-bottom: 1px solid rgba(255,254,249,.18); color: var(--snow); background: transparent; opacity: .4; text-align: left; cursor: pointer; transition: padding .4s cubic-bezier(.2,.7,.2,1), opacity .35s ease, background .35s ease; }
-.journey-step::before { position: absolute; top: -1px; bottom: -1px; left: -20px; width: 3px; content: ''; transform: scaleY(0); background: var(--ash); transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.journey-step { position: relative; width: 100%; display: grid; grid-template-columns: 45px 1fr 24px; gap: 10px; padding: 24px 0; border: 0; border-bottom: 1px solid rgba(255,254,249,.18); color: var(--snow); background: transparent; opacity: .4; text-align: left; cursor: pointer; transition: padding .65s cubic-bezier(.22,.75,.2,1), opacity .6s ease, background .75s cubic-bezier(.22,.75,.2,1); }
+.journey-step::before { position: absolute; top: -1px; bottom: -1px; left: -20px; width: 3px; content: ''; transform: scaleY(0); background: var(--ash); transition: transform .7s cubic-bezier(.22,.75,.2,1); }
 .journey-step:hover { opacity: .78; }
 .journey-step.active { padding-right: 14px; padding-left: 16px; opacity: 1; background: linear-gradient(90deg, rgba(154,168,152,.26), rgba(100,117,101,.08) 54%, rgba(100,117,101,0) 78%); }
 .journey-step.active::before { transform: scaleY(1); }
 .journey-step b { color: var(--mist); font-size: 12px; font-weight: 400; }
 .journey-step strong { display: block; font-size: 22px; letter-spacing: -.04em; }
-.journey-step small { display: block; max-width: 440px; max-height: 0; margin-top: 0; overflow: hidden; color: var(--mist); font-size: 14px; line-height: 1.5; opacity: 0; transform: translateY(8px); transition: max-height .45s cubic-bezier(.2,.7,.2,1), margin-top .45s ease, opacity .3s ease, transform .45s cubic-bezier(.2,.7,.2,1); }
+.journey-step small { display: block; max-width: 440px; max-height: 0; margin-top: 0; overflow: hidden; color: var(--mist); font-size: 14px; line-height: 1.5; opacity: 0; transform: translateY(8px); transition: max-height .7s cubic-bezier(.22,.75,.2,1), margin-top .7s ease, opacity .5s ease .12s, transform .7s cubic-bezier(.22,.75,.2,1); }
 .journey-step.active small { max-height: 140px; margin-top: 10px; opacity: 1; transform: translateY(0); }
-.journey-step>svg { width: 18px; height: 18px; opacity: 0; transition: opacity .2s ease, transform .2s ease; }
+.journey-step>svg { width: 18px; height: 18px; opacity: 0; transition: opacity .45s ease, transform .55s cubic-bezier(.22,.75,.2,1); }
 .journey-step.active>svg { opacity: 1; transform: translate(2px,-2px); }
 
 .technology { display: grid; grid-template-columns: 1.02fr .98fr; gap: 0; align-items: stretch; margin-top: 112px; margin-bottom: 112px; padding: 18px; border: 1px solid var(--cloud); border-radius: 52px; background: var(--gradient-surface); }
@@ -443,6 +443,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .principles article:nth-child(4) { border-left: 1px solid var(--cloud); }
   .principles article:nth-child(odd) { border-left: 0; }
   .principles article:nth-child(n+3) { border-top: 1px solid var(--cloud); }
+  .principles article:last-child { grid-column: 1 / -1; }
   .consultation.container { width: calc(100% - 32px); padding-inline: 0; }
   .consultation { grid-template-columns: 1fr; border-radius: 38px; }
   .consultation-copy { min-height: auto; padding: 48px 42px 38px; }
@@ -453,6 +454,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .concern-grid a:nth-child(4n+2), .concern-grid a:nth-child(4n+3), .concern-grid a:nth-child(4n+4) { border-left: 0; }
   .concern-grid a:nth-child(even) { border-left: 1px solid var(--cloud); }
   .concern-grid a:nth-child(n+3) { border-top: 1px solid var(--cloud); }
+  .concern-grid a:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .journey { height: 440svh; }
   .journey-sticky { top: 64px; min-height: calc(100svh - 64px); padding: 24px 0 84px; }
   .journey-grid, .technology, .reviews, .faq, .booking-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -518,6 +520,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .principles article { min-height: 150px; }
   .principles article:nth-child(4), .principles article:nth-child(even) { border-left: 0; }
   .principles article:nth-child(n+2) { border-top: 1px solid var(--cloud); }
+  .principles article:last-child { grid-column: auto; }
   .consultation.container { width: calc(100% - 20px); }
   .consultation { border-radius: 32px; }
   .consultation-copy { min-height: auto; padding: 38px 24px 28px; }
@@ -529,6 +532,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
   .concern-grid { grid-template-columns: 1fr 1fr; border-radius: 32px; }
   .concern-grid a:nth-child(even) { border-left: 1px solid var(--cloud); }
   .concern-grid a:nth-child(n+3) { border-top: 1px solid var(--cloud); }
+  .concern-grid a:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .concern-grid a { min-height: 128px; padding: 18px 16px; }
   .concern-grid strong { font-size: 15px; }
   .concern-grid span { max-width: 120px; font-size: 11px; line-height: 1.35; }
