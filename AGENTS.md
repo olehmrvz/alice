@@ -9,8 +9,8 @@ Before making substantial visual changes, use the Product Design plugin's `get-c
 - External-profile blocks should explain the visitor value before the outbound CTA. Avoid duplicating the same Instagram message on both sides of a card; show concrete content categories as proof instead.
 - Never apply clipped, masked, or gradient-filled text effects to the hero display type: it must render as plain Inter text with fully visible glyph edges and punctuation at every breakpoint.
 - The header mark is a compact, unified wordmark: its divider and endorsement line should feel intentionally aligned, never squeezed or improvised.
-- Use softened eucalyptus tones for accents and forest surfaces. Do not use `#53644f` / `rgb(83,100,79)`, which reads muddy and inexpensive in this system.
-- Keep page-level light backgrounds to two intentional surfaces only: warm paper by default and a muted eucalyptus wash for diagnostic/evaluation moments. Cards may use a slightly lifted paper surface, but should not introduce additional section backgrounds.
+- The brand accent is Deep Mahogany from the supplied Pantone card (19-1306 TCX). Use the screen-adapted mahogany family (`#2d1215` / `#7d4746` / warm rose neutrals) for dark surfaces, accents, controls, gradients, focus and hover states; do not reintroduce eucalyptus green.
+- Keep page-level light backgrounds to two intentional surfaces only: warm paper by default and a muted mahogany wash for diagnostic/evaluation moments. Cards may use a slightly lifted paper surface, but should not introduce additional section backgrounds.
 - Horizontal service rails use direct drag interaction for mouse users; the vertical mouse wheel must remain reserved for page scrolling.
 - On tablet and mobile, section containers must retain the same side rhythm; avoid full-bleed panels unless intentionally used for an image. Reduce fixed content heights so an action never leaves a large dead gap before the next visual.
 - Mobile footer should present brand, navigation, visit details and legal/booking content as legible stacked groups, with at least 14px body links and an easy-to-hit booking CTA.
