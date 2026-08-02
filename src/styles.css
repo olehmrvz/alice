@@ -71,7 +71,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero { position: relative; min-height: calc(100svh - 80px); overflow: hidden; background: var(--gradient-paper); border-bottom: 1px solid var(--cloud); }
 .hero-stage { position: relative; display: grid; grid-template-columns: 58% 42%; align-items: center; min-height: calc(100svh - 80px); padding-top: 0; padding-bottom: 0; }
 .hero-copy { position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: center; min-height: 0; padding: 0; }
-.hero-copy h1 { width: 760px; margin: 0; color: var(--obsidian); font-size: clamp(68px, 6.4vw, 94px); font-weight: 600; letter-spacing: -.075em; line-height: 1.02; overflow: visible; }
+.hero-copy h1 { width: 760px; margin: 0; color: var(--obsidian); font-size: clamp(68px, 6.42vw, 90px); font-weight: 600; letter-spacing: -.075em; line-height: .98; overflow: visible; }
 .hero-copy h1 span { display: block; width: max-content; max-width: 100%; white-space: nowrap; opacity: 0; transform: translateY(55px); animation: title-in .8s cubic-bezier(.2,.7,.2,1) forwards; }
 .hero-copy h1 span:nth-child(1) { animation-delay: .18s; }
 .hero-copy h1 span:nth-child(2) { animation-delay: .25s; }
