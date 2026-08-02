@@ -5,8 +5,10 @@ import {
   ArrowsHorizontal,
   ArrowUpRight,
   InstagramLogo,
+  List,
   MapPin,
   Sparkle,
+  X,
 } from "@phosphor-icons/react";
 
 const directions = [
@@ -363,7 +365,6 @@ export function App() {
   };
   const [interestError, setInterestError] = useState(false);
   const [bookingVisible, setBookingVisible] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const currentResult = resultData[result];
   const currentStep = steps[step];
 
@@ -389,16 +390,9 @@ export function App() {
     );
     if (bookingSection) bookingObserver.observe(bookingSection);
 
-    const onScroll = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(max > 0 ? window.scrollY / max : 0);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
     return () => {
       observer.disconnect();
       bookingObserver.disconnect();
-      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
@@ -468,11 +462,7 @@ export function App() {
 
   return (
     <>
-      <header
-        className={
-          scrollProgress > 0.01 ? "site-header scrolled" : "site-header"
-        }
-      >
+      <header className="site-header inner-header">
         <a
           className="logo"
           href="#top"
@@ -482,16 +472,16 @@ export function App() {
           <small>in Beautyland</small>
         </a>
         <button
-          className="menu-toggle"
+          className="menu-toggle inner-menu-toggle"
           type="button"
-          aria-controls="site-nav"
+          aria-controls="inner-site-nav"
           aria-expanded={menu}
           onClick={() => setMenu(!menu)}
         >
-          {menu ? "Закрити" : "Меню"}
+          {menu ? <><X /> Закрити</> : <><List /> Меню</>}
         </button>
         <nav
-          id="site-nav"
+          id="inner-site-nav"
           className={menu ? "site-nav open" : "site-nav"}
           aria-label="Основна навігація"
         >
@@ -504,11 +494,11 @@ export function App() {
           <a href="/tsiny" onClick={() => setMenu(false)}>
             Ціни
           </a>
-          <a href="#faq" onClick={() => setMenu(false)}>
-            FAQ
+          <a href="/spetsialni-propozytsii" onClick={() => setMenu(false)}>
+            Пропозиції
           </a>
-          <a href="#booking" onClick={() => setMenu(false)}>
-            Контакти
+          <a href="/zhurnal" onClick={() => setMenu(false)}>
+            Журнал
           </a>
         </nav>
         <div className="header-cta">
@@ -516,10 +506,6 @@ export function App() {
             Записатися <Arrow />
           </a>
         </div>
-        <div
-          className="scroll-progress"
-          style={{ transform: `scaleX(${scrollProgress})` }}
-        />
       </header>
 
       <main id="top">
