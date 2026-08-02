@@ -1180,6 +1180,8 @@ export function App() {
           </div>
         </section>
 
+        <InstagramPanel />
+
         <section
           className="booking"
           id="booking"
@@ -1345,8 +1347,6 @@ export function App() {
             </form>
           </div>
         </section>
-        <InstagramPanel />
-
         <section
           className="faq container section"
           id="faq"
