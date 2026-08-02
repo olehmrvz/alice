@@ -43,7 +43,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .logo small { margin-left: 2px; font-size: 10px; letter-spacing: .02em; }
 .site-header>.logo { width: 86px; min-height: 42px; justify-content: center; gap: 6px; line-height: 1; }
 .site-header>.logo strong { width: 100%; padding: 0 0 6px; border-bottom: 1px solid rgba(29,42,35,.5); font: 700 27px/.78 var(--font); letter-spacing: -.095em; }
-.site-header>.logo small { width: 100%; margin: 0; color: var(--steel); font-size: 6px; font-weight: 700; line-height: 1; letter-spacing: .08em; text-align: justify; text-align-last: justify; text-transform: uppercase; white-space: nowrap; }
+.site-header>.logo small { width: 100%; margin: 0; color: var(--steel); font-size: 6px; font-weight: 700; line-height: 1; letter-spacing: .015em; text-align: center; text-transform: uppercase; white-space: nowrap; }
 .site-nav { display: flex; justify-content: center; gap: 28px; }
 .site-nav a, .header-cta>span { position: relative; color: var(--iron); font-size: 14px; font-weight: 500; text-decoration: none; }
 .site-nav a::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 1px; content: ''; transform: scaleX(0); transform-origin: right; background: var(--obsidian); transition: transform .25s ease; }
