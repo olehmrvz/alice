@@ -132,7 +132,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .section-heading h2 { font-size: clamp(44px, 5vw, 62px); }
 .rail-hint { display: inline-flex; align-items: center; gap: 7px; padding-bottom: 8px; color: var(--fog); font-size: 12px; }
 .rail-hint svg { width: 16px; height: 16px; }
-.service-rail { display: flex; gap: 18px; align-items: flex-start; overflow-x: auto; margin: 50px max(0px, calc((1200px - 100vw)/2)) 30px; padding: 14px max(24px, calc((100vw - var(--max))/2)) 28px; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; touch-action: pan-y; user-select: none; }
+.service-rail { display: flex; gap: 18px; align-items: flex-start; overflow-x: auto; margin: 50px max(0px, calc((1200px - 100vw)/2)) 30px; padding: 14px max(24px, calc((100% - var(--max))/2 + 24px)) 28px; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; touch-action: pan-y; user-select: none; }
 .service-rail::-webkit-scrollbar { display: none; }
 .service-rail[data-dragging="true"] { cursor: grabbing; scroll-snap-type: none; }
 .service-rail[data-dragging="true"] .service-card { pointer-events: none; }
@@ -500,6 +500,7 @@ footer:not(.home-footer)>span { grid-column: 1/-1; padding-top: 25px; border-top
 @media (max-width: 560px) {
   .container { padding-inline: 20px; }
   .site-header { padding-inline: 20px; }
+  .service-rail { padding-left: 20px; }
   .hero-copy { padding: 48px 20px 30px; }
   .hero-copy h1 { font-size: clamp(47px, 14.3vw, 62px); line-height: 1.04; }
   .hero-copy>p { margin: 28px 0 24px; font-size: 15px; line-height: 1.58; }
