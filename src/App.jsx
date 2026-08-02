@@ -293,6 +293,160 @@ function InterestSelect({ value, onChange, invalid }) {
   );
 }
 
+export function BookingSection() {
+  const [submitted, setSubmitted] = useState(false);
+  const [interest, setInterest] = useState(
+    () => new URLSearchParams(window.location.search).get("interest") || "",
+  );
+  const [interestError, setInterestError] = useState(false);
+
+  return (
+    <section className="booking" id="booking" aria-labelledby="booking-title">
+      <div className="container booking-grid">
+        <div className="booking-copy">
+          <span className="eyebrow orange">ЗАПИС НА КОНСУЛЬТАЦІЮ</span>
+          <h2 id="booking-title">
+            Заповніть форму —<em>ми підберемо лікаря й зручний час.</em>
+          </h2>
+          <p>
+            Адміністратор зв’яжеться з вами, уточнить запит і запропонує час
+            для першої консультації. Обирати процедуру самостійно не
+            потрібно.
+          </p>
+          <div className="booking-prices">
+            <span>
+              <small>ЛІКАР</small>
+              <b>1 000 грн</b>
+            </span>
+            <span>
+              <small>ГОЛОВНИЙ ЛІКАР</small>
+              <b>1 800 грн</b>
+            </span>
+          </div>
+          <div className="booking-contact-cards">
+            <a
+              href="https://www.instagram.com/alice__in__beautyland/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramLogo aria-hidden="true" />
+              <span>
+                <small>INSTAGRAM</small>
+                <strong>@alice__in__beautyland</strong>
+              </span>
+              <Arrow />
+            </a>
+            <a
+              href="https://maps.app.goo.gl/8yWuvxcJt8amanj28"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MapPin aria-hidden="true" />
+              <span>
+                <small>ЛОКАЦІЯ</small>
+                <strong>Відкрити на Google Maps</strong>
+              </span>
+              <Arrow />
+            </a>
+          </div>
+        </div>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            if (!interest) {
+              setInterestError(true);
+              document.querySelector("#interest-trigger")?.focus();
+              return;
+            }
+            setInterestError(false);
+            setSubmitted(true);
+          }}
+        >
+          <span className="form-kicker">01 / ПЕРШИЙ КРОК</span>
+          <span className="form-title">Запит на консультацію</span>
+          <label>
+            <span className="field-label">
+              Ім’я <span className="required-mark" aria-hidden="true">*</span>
+            </span>
+            <input required name="name" autoComplete="name" placeholder="Як до вас звертатися" />
+          </label>
+          <label>
+            <span className="field-label">
+              Телефон <span className="required-mark" aria-hidden="true">*</span>
+            </span>
+            <input required name="phone" autoComplete="tel" type="tel" placeholder="+380 XX XXX XX XX" />
+          </label>
+          <label>
+            <span className="field-label">Instagram-нікнейм</span>
+            <input name="instagram" autoComplete="off" placeholder="@username" />
+          </label>
+          <div className="form-field interest-field">
+            <label id="interest-field-label">
+              Що вас цікавить? <span className="required-mark" aria-hidden="true">*</span>
+            </label>
+            <InterestSelect
+              value={interest}
+              invalid={interestError}
+              onChange={(value) => {
+                setInterest(value);
+                setInterestError(false);
+              }}
+            />
+          </div>
+          <fieldset>
+            <legend>
+              Як зручно зв’язатися? <span className="required-mark" aria-hidden="true">*</span>
+            </legend>
+            <label>
+              <input required type="radio" name="contact" value="instagram" defaultChecked /> Instagram
+            </label>
+            <label>
+              <input type="radio" name="contact" value="phone" /> Телефон
+            </label>
+          </fieldset>
+          <label className="privacy">
+            <input type="checkbox" required /> Погоджуюся з{" "}
+            <a href="/polityka-konfidentsiinosti">політикою конфіденційності</a>.
+          </label>
+          <button className="button button-dark" type="submit">
+            {submitted ? "Запит надіслано" : <><span>Надіслати запит</span> <Arrow /></>}
+          </button>
+          {submitted && (
+            <p className="form-success" role="status">
+              Дякуємо! Адміністратор зв’яжеться з вами найближчим часом.
+            </p>
+          )}
+        </form>
+      </div>
+    </section>
+  );
+}
+
+export function FaqSection() {
+  const [openFaq, setOpenFaq] = useState(0);
+
+  return (
+    <section className="faq container section" id="faq" aria-labelledby="faq-title">
+      <div>
+        <span className="eyebrow">FAQ</span>
+        <h2 id="faq-title">Знаєте, чого очікувати<br /><em>ще до візиту.</em></h2>
+        <p>Коротко пояснюємо, як підготуватися до консультації.</p>
+      </div>
+      <div className="faq-list">
+        {faqs.map(([question, answer], index) => (
+          <article className={openFaq === index ? "faq-item open" : "faq-item"} key={question}>
+            <button type="button" aria-expanded={openFaq === index} onClick={() => setOpenFaq(openFaq === index ? -1 : index)}>
+              <span>{question}</span>
+              <b>{openFaq === index ? "−" : "+"}</b>
+            </button>
+            {openFaq === index && <p>{answer}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function InstagramPanel() {
   return (
     <section className="instagram-follow" aria-label="Instagram клініки">

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, InstagramLogo, List, MagnifyingGlass, X } from '@phosphor-icons/react';
-import { App as HomePage } from './App';
+import { App as HomePage, BookingSection, FaqSection } from './App';
 import { articles, legalPages, services } from './data/content';
 import { expertVideos, specialOffers, specialistPlaceholders } from './data/experience-content';
 import { pricingCategories, pricingSubcategories } from './data/catalog';
@@ -62,7 +62,7 @@ function SiteHeader() {
       <Link to="/spetsialni-propozytsii">Пропозиції</Link>
       <Link to="/zhurnal">Журнал</Link>
     </nav>
-    <div className="header-cta"><Link className="button button-dark" to="/#booking">Записатися <Arrow /></Link></div>
+    <div className="header-cta"><a className="button button-dark" href="#booking">Записатися <Arrow /></a></div>
   </header>;
 }
 
@@ -78,7 +78,7 @@ function SiteFooter() {
         <span>НАВІГАЦІЯ</span><Link to="/posluhy">Послуги</Link><Link to="/likari">Лікарі</Link><Link to="/tsiny">Ціни</Link><Link to="/spetsialni-propozytsii">Пропозиції</Link><Link to="/zhurnal">Журнал</Link>
       </nav>
       <div className="footer-column footer-visit"><span>ВІЗИТ</span><p>Печерськ<br />Київ, Україна</p></div>
-      <div className="footer-column footer-documents"><span>ДОКУМЕНТИ</span><Link to="/polityka-konfidentsiinosti">Конфіденційність</Link><Link to="/pravyla-zapysu">Правила запису</Link><Link to="/publichna-oferta">Публічна оферта</Link><Link className="footer-booking-cta" to="/#booking">Записатися <Arrow /></Link></div>
+      <div className="footer-column footer-documents"><span>ДОКУМЕНТИ</span><Link to="/polityka-konfidentsiinosti">Конфіденційність</Link><Link to="/pravyla-zapysu">Правила запису</Link><Link to="/publichna-oferta">Публічна оферта</Link><a className="footer-booking-cta" href="#booking">Записатися <Arrow /></a></div>
       <div className="footer-bottom"><span>© 2026 ALICE in Beautyland</span><span>ЕСТЕТИЧНА МЕДИЦИНА · ПЕЧЕРСЬК</span><Link to="/">Нагору ↑</Link></div>
     </div>
   </footer>;
@@ -86,7 +86,7 @@ function SiteFooter() {
 
 function PageLayout({ children }) {
   usePageEffects();
-  return <><SiteHeader />{children}<SiteFooter /><Link className="mobile-booking inner-mobile-booking" to="/#booking">Консультація від 1 000 грн <Arrow /></Link></>;
+  return <><SiteHeader />{children}<BookingSection /><FaqSection /><SiteFooter /><a className="mobile-booking inner-mobile-booking" href="#booking">Консультація від 1 000 грн <Arrow /></a></>;
 }
 
 function Breadcrumbs({ items }) {
