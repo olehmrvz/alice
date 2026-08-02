@@ -156,6 +156,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .concern-grid a { position: relative; min-height: 168px; padding: 24px; text-decoration: none; transition: color .25s ease, background .25s ease; }
 .concern-grid a:nth-child(4n+2), .concern-grid a:nth-child(4n+3), .concern-grid a:nth-child(4n+4) { border-left: 1px solid var(--cloud); }
 .concern-grid a:nth-child(n+5) { border-top: 1px solid var(--cloud); }
+.concern-grid a:nth-child(8), .concern-grid a:nth-child(11) { border-bottom: 1px solid var(--cloud); }
+.concern-grid a:nth-child(11) { border-right: 1px solid var(--cloud); }
 .concern-grid a:hover { color: var(--snow); background: var(--obsidian); }
 .concern-grid strong { display: block; max-width: 180px; font-size: 17px; line-height: 1.12; letter-spacing: -.03em; }
 .concern-grid span { display: block; margin-top: 10px; color: var(--steel); font-size: 12px; }
