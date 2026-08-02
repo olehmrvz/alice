@@ -1064,7 +1064,7 @@ export function App() {
                   key={title}
                 >
                   <span>0{index + 1}</span>
-                  {title}
+                  <span className="result-tab-title">{title}</span>
                 </button>
               ))}
             </div>
